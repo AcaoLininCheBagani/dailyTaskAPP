@@ -1,0 +1,29 @@
+@import "_global.scss";
+
+.task-list {
+  display: grid;
+
+  h2 {
+    font-size: 20px;
+    color: rgb(8, 99, 99);
+    margin-bottom: 8px;
+    justify-self: center;
+    text-decoration: none;
+  }
+  .task-preview {
+    display: grid;
+    padding: 10px 106px;
+    margin-right: 250px;
+    margin-left: 250px;
+    border: 1px solid #fafafa;
+
+    h3 {
+      font-size: 20px;
+      color: rgb(8, 99, 99);
+      margin-bottom: 8px;
+    }
+    &:hover {
+      box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+    }
+  }
+}

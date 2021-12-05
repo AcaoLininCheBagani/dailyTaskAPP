@@ -1,0 +1,49 @@
+@import "_global.scss";
+
+.create {
+  text-align: center;
+  display: grid;
+
+  .addForm {
+    background: red;
+    margin-left: 150px;
+    margin-right: 150px;
+    padding: 50px;
+    border-radius: 5px;
+    border: 0;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+    background-color: rgb(96, 138, 201);
+    display: grid;
+    label {
+      text-align: left;
+      display: block;
+    }
+    h2 {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+    input,
+    textare {
+      width: 100%;
+      padding: 6px 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      box-sizing: border-box;
+      display: block;
+      border-radius: 2px;
+      border: 0;
+    }
+    button {
+      margin-top: 18px;
+      height: 50px;
+      color: white;
+      background: rgb(8, 91, 129);
+      border: 0;
+      border-radius: 2px;
+      height: 40px;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
