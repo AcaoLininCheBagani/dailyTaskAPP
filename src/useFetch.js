@@ -21,7 +21,7 @@ const useFetch = (url) => {
           console.log("fetch aborted");
         } else {
           setIsPending(false);
-          nav("/");
+          nav("/home");
         }
       });
     return () => abortCont.abort();

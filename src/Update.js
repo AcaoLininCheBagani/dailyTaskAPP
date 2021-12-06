@@ -23,7 +23,7 @@ const Update = () => {
       })
       .then((response) => {
         alert(response.data.message);
-        nav("/");
+        nav("/home");
       });
   }
   return (

@@ -3,14 +3,14 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Login = () => {
+const AdminLogin = () => {
   const [em, setEmail] = useState("");
   const [pw, setPassword] = useState("");
   const navigate = useNavigate();
 
   async function login(e) {
     e.preventDefault();
-    const url = "http://127.0.0.1:8000/api/auth/personlogin";
+    const url = "http://127.0.0.1:8000/api/auth/adminlogin";
     axios
       .post(url, {
         email: em,
@@ -21,7 +21,7 @@ const Login = () => {
         sessionStorage.setItem("token", token);
         const link = document.getElementById("link-none");
         link.style.display = "grid";
-        navigate("/home");
+        navigate("/admindashboard");
       })
       .catch((err) => {
         console.log(err);
@@ -40,7 +40,7 @@ const Login = () => {
       <div className="log-form">
         <form onSubmit={login}>
           <div className="dl">
-            <h3 className="login">LOGIN</h3>
+            <h3 className="login">ADMIN LOGIN</h3>
           </div>
           <div className="dl1">
             <label>Email address</label>
@@ -66,9 +66,6 @@ const Login = () => {
 
           <div className="dl3">
             <button>Submit</button>
-            <p>
-              Not yet registered? <a href="/register">password?</a>
-            </p>
           </div>
         </form>
       </div>
@@ -76,4 +73,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default AdminLogin;
